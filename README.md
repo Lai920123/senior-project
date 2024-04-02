@@ -51,7 +51,7 @@ docker compose up
 開啟第二個Terminal用來新增管理員帳號
 
 ```bash
-docker compose exec netbox /opt/netbox/manage.py createsuperuser 
+docker compose exec netbox /opt/netbox/netbox/manage.py createsuperuser 
 ```
 
 輸入管理員帳號、信箱以及密碼
