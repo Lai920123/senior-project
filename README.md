@@ -32,7 +32,6 @@ sudo docker run hello-world
 sudo usermod -aG docker $USER
 ```
 
-
 使用docker啟動netbox 
 
 ```bash 
