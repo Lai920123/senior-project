@@ -19,13 +19,19 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null 
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo usermod -aG docker $USER
-docker run hello-world
+sudo docker run hello-world
 ```
 
 出現以下畫面就算成功
 
 ![alt text](Image/image.png)
+
+將user加入至docker群組中，這樣下次就不需要使用sudo也可執行docker
+
+```bash
+sudo usermod -aG docker $USER
+```
+
 
 使用docker啟動netbox 
 
