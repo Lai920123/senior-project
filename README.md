@@ -64,6 +64,21 @@ Password(again): #Password(again)
 Superuser created successfully 
 ```
 
-使用http://IP-Address:8000進入netbox web interface 
+使用http://IP-Address:8000進入netbox web interface並使用剛剛新增的帳號密碼登入
 
 ![alt text](Image/image1.png)
+
+安裝Ansible和所需套件
+
+```bash
+sudo apt -y install python3.10-venv #Python3.10虛擬環境
+mkdir ansible-netbox #建立資料夾
+cd ansible-netbox #進入資料夾
+python3.10 -m venv . #建立虛擬環境
+source bin/activate #啟動虛擬環境
+python3 -m pip install --upgrade pip #更新pip
+pip3 install ansible netaddr ansible-pylibssh pytz pynetbox #安裝ansible和所需套件
+ansible-galaxy collection install netbox.netbox #安裝netbox collection
+ansible-galaxy collection install cisco.ios #安裝cisco collection
+```
+
